@@ -1,0 +1,12 @@
+{
+  "explorer.compactFolders": false,
+  "editor.mouseWheelZoom": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "always"
+  },
+  "editor.fontSize": 14,
+  "markdown.preview.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+  "window.zoomLevel": 0,
+  "workbench.sideBar.location": "right"
+}
