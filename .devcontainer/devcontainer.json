@@ -1,48 +1,46 @@
 {
-    "name": "Project",
-    "build": {
-        "dockerfile": "Dockerfile",
-        "args": {
-          "REMOTE_USER": "vscode",
-          "REMOTE_UID": "1000",
-          "REMOTE_GID": "1000"
-        }
-    },
-    "runArgs": [
-    ],
-    "appPort": [
-    ],
-    "initializeCommand": "bash ./.devcontainer/cmd/initialize.sh",
-    "onCreateCommand": "bash ./.devcontainer/cmd/onCreate.sh",
-    "postStartCommand": "bash ./.devcontainer/cmd/postStart.sh",
-    "postCreateCommand": "bash ./.devcontainer/cmd/postCreate.sh",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/project,type=bind",
-    "workspaceFolder": "/workspace/project",
-    "mounts": [
-      "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
-    ],
-    "features": {
-      "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
-        "theme": "bira"
-      }
-    },
-    "customizations": {
-      "vscode": {
-        "extensions": [
-            "EditorConfig.EditorConfig"
-        ],
-        "settings": {
-          "terminal.integrated.defaultProfile.linux": "zsh",
-          "terminal.integrated.profiles.linux": {
-            "bash": {
-              "path": "bash",
-              "icon": "terminal-bash"
-            },
-            "zsh": {
-              "path": "zsh"
-            }
+  "name": "Project",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "REMOTE_USER": "vscode",
+      "REMOTE_UID": "1000",
+      "REMOTE_GID": "1000"
+    }
+  },
+  "runArgs": [],
+  "appPort": [],
+  "initializeCommand": "bash ./.devcontainer/cmd/initialize.sh",
+  "onCreateCommand": "bash ./.devcontainer/cmd/onCreate.sh",
+  "postStartCommand": "bash ./.devcontainer/cmd/postStart.sh",
+  "postCreateCommand": "bash ./.devcontainer/cmd/postCreate.sh",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/project,type=bind",
+  "workspaceFolder": "/workspace/project",
+  "mounts": [
+    "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
+  ],
+  "features": {
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {
+      "theme": "bira"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.EditorConfig"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "path": "zsh"
           }
         }
       }
     }
   }
+}
